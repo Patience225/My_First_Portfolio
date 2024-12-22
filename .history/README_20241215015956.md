@@ -1,0 +1,3 @@
+# My First Portfolio
+
+This project is my first step in creating a professional portfolio using only HTML, CSS, and JavaScript.

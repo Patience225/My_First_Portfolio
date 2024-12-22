@@ -1,0 +1,153 @@
+/* Root variables for colors */
+:root {
+  --light-purple: #f3e6ff; /* Background for index */
+  --medium-purple: #d9b3ff; /* Background for tweets */
+  --dark-purple: #a64dff; /* Header/Footer background */
+  --accent-purple: #6600cc; /* Accent elements like links */
+  --text-dark: #333333; /* Professional dark text color */
+  --text-light: #ffffff; /* Light text for contrast */
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Body Themes */
+body.index-page {
+  background-color: var(--light-purple);
+  color: var(--text-dark);
+}
+
+body.tweets-page {
+  background-color: var(--medium-purple);
+  color: var(--text-dark);
+}
+
+/* Header Styling */
+header {
+  background-color: var(--dark-purple);
+  color: var(--text-light);
+  padding: 20px;
+  width: 100;
+  text-align: center;
+  border-bottom: 5px solid var(--accent-purple);
+}
+
+header h1 {
+  margin-bottom: 5px;
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* Navigation Bar */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: var(--accent-purple);
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--light-purple);
+}
+
+/* Main Flexbox Layout */
+main {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Article and Aside */
+article {
+  flex: 2;
+  background-color: var(--light-purple);
+  padding: 20px;
+  border-radius: 10px;
+  overflow-y: auto;
+}
+
+aside {
+  flex: 1;
+  background-color: var(--medium-purple);
+  padding: 20px;
+  border-radius: 10px;
+  overflow-y: auto;
+  color: var(--text-dark);
+}
+
+/* Footer Styling */
+footer {
+  background-color: var(--dark-purple);
+  color: var(--text-light);
+  text-align: center;
+  padding: 10px;
+  position: sticky;
+  bottom: 0;
+}
+
+/* Section Styling */
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: var(--accent-purple);
+}
+
+p, ul {
+  margin-bottom: 10px;
+}
+
+/* Links Styling */
+a {
+  color: var(--accent-purple);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+  main {
+      flex-direction: column;
+  }
+
+  nav ul {
+      flex-direction: column;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+}
